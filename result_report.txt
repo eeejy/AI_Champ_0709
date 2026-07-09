@@ -1,0 +1,15 @@
+CSV Quality Check Report
+============================
+Source File: sample.csv
+Required Columns: id, name, amount
+
+Status: PASSED
+- Missing required columns: None
+- Missing values in required columns: 1
+  - Row 7: amount is empty
+- Duplicate rows: 0
+- Negative amount values: 1
+  - Row 4: amount=-50
+- Numeric conversion failures: 2
+  - Row 5: amount=abc (invalid number)
+  - Row 7: amount= (empty amount)
