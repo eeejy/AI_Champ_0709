@@ -1,18 +1,22 @@
 ---
-name: simple-harness-skill
-description: A minimal harness-style skill for quick testing and scaffolding.
+name: csv-quality-harness
+description: Validate CSV files for required columns, missing values, duplicates, negative amounts, and numeric conversion issues.
 ---
 
-# Simple Harness Skill
+# CSV Quality Harness
 
-이 스킬은 빠르게 시작할 수 있는 아주 작은 예시입니다.
+이 스킬은 CSV 파일을 입력받아 품질 검사를 수행하고 결과 보고서를 생성합니다.
 
 ## 목적
-- 최소 구조로 시작하기
-- 간단한 동작 확인하기
-- 필요에 따라 확장하기
+- 필수 컬럼을 자동으로 확인합니다.
+- 결측값과 중복 행을 탐지합니다.
+- amount 컬럼의 이상값을 검사합니다.
+- result_report.txt를 생성합니다.
 
-## 빠른 시작
-1. 저장소 파일을 확인합니다.
-2. 데모 스크립트를 실행합니다.
-3. 자신의 로직으로 확장합니다.
+## 실행 방식
+1. sample.csv 또는 원하는 CSV 파일을 준비합니다.
+2. 다음 명령으로 실행합니다.
+   ```bash
+   python csv_quality_harness.py
+   ```
+3. 결과는 result_report.txt로 저장됩니다.
